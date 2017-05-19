@@ -47,7 +47,8 @@ const routes: Routes = [
    MdToolbarModule,
    MdIconModule,
    MdInputModule,
-   RouterModule
+   RouterModule,
+   SearchBarComponent
 ],
  providers: [ MovieService ],
  bootstrap: [AppComponent]

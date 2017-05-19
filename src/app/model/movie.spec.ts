@@ -14,7 +14,7 @@ describe('Movie', () => {
 
   it('has poster', () => {
     const movie = new Movie('tt0120338', 'Titanic', '1997', 'https://images-na.ssl-images-amazon.com/images/M/MV5BMDdmZGU3NDQtY2.jpg');
-    expect(movie.poster).toBe('https://images-na.ssl-images-amazon.com/images/M/MV5BMDdmZGU3NDQtY2._V1_SX300.jpg');
+    expect(movie.poster).toBe('https://images-na.ssl-images-amazon.com/images/M/MV5BMDdmZGU3NDQtY2.jpg');
   });
 
   it('has year', () => {

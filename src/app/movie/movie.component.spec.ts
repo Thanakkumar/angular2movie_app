@@ -1,6 +1,8 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MovieComponent } from './movie.component';
+import {ActivatedRoute,Params } from '@angular/router';
+import { MovieService } from './movie.service';
 
 describe('MovieComponent', () => {
   let component: MovieComponent;
@@ -8,7 +10,9 @@ describe('MovieComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MovieComponent ]
+      declarations: [ MovieComponent ],
+      providers: [ { provide: ActivatedRoute },{ provide:MovieService }],
+      schemas :[NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));
