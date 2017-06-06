@@ -1,3 +1,4 @@
+// spec file to check the search component
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchBarComponent } from './search-bar.component';
@@ -6,10 +7,8 @@ import {Router} from '@angular/router';
 describe('SearchBarComponent', () => {
   let component: SearchBarComponent;
   let fixture: ComponentFixture<SearchBarComponent>;
-  let mockRouter:any;
     class MockRouter {
-        //noinspection TypeScriptUnresolvedFunction
-        navigate = jasmine.createSpy('navigate');
+       navigate = jasmine.createSpy('navigate');
     }
 
   beforeEach(async(() => {

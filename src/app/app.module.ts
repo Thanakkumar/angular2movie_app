@@ -7,23 +7,25 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
 import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MdInputModule} from '@angular/material';
-import { AppNavigationComponent } from './app-navigation/app-navigation.component';
+import { NavigationComponent } from './navigation/navigation.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { MovieComponent } from './movie/movie.component';
 import { Routes , RouterModule } from '@angular/router';
-import { MovieService } from './movie/movie.service';
+import { MovieService } from './service/movie.service';
 import { MovieAppMaterialModule } from './movie-app-material.module';
-const routes: Routes = [
+import {MovieModule} from './movie/movie.module';
+import {FavMovieComponent} from './fav-movie/favmovie.component';
 
-  { path: 'movie/:movieName',  component: MovieComponent }];
 
 
 @NgModule({
  declarations: [
    AppComponent,
-   AppNavigationComponent,
+   NavigationComponent,
    SearchBarComponent,
-   MovieComponent
+   MovieComponent,
+   FavMovieComponent
+
    ],
  imports: [
    BrowserModule,
@@ -36,8 +38,9 @@ const routes: Routes = [
    MdToolbarModule,
    MdIconModule,
    MdInputModule,
-   MaterialModule, MovieAppMaterialModule,
-   RouterModule.forRoot(routes)
+   MaterialModule,
+   MovieAppMaterialModule,
+  MovieModule
  ],
  exports: [
    BrowserAnimationsModule,
